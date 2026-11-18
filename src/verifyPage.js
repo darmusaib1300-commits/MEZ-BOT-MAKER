@@ -1,6 +1,6 @@
-import { esc } from './db.ts';
+import { esc } from './db.js';
 
-export function renderDeviceVerifyHtml(token: string, botLabel: string): string {
+export function renderDeviceVerifyHtml(token, botLabel) {
   const safeToken = esc(token);
   const safeLabel = esc(botLabel || 'Telegram Bot');
   return `<!doctype html>
